@@ -304,34 +304,172 @@
 
   </div>
     </section><!-- End Services Section -->
+    
 
+    <!--Math section-->
     <section id="math" class="math">
       <div class="section-title">
         <h2>Math</h2>
         <p>Let's learn some math:</p>
       </div>
-    <h1>Pythagorean Theorem</h1>
-    <p>The Pythagorean theorem states that in a right-angled triangle, the square of the length of the hypotenuse (the side opposite the right angle) is equal to the sum of the squares of the lengths of the other two sides. This can be represented as:</p>
+    
     <!-- Insert MathML formula here -->
     <math xmlns="http://www.w3.org/1998/Math/MathML">
-      <msup>
+      <mrow>
+        <mi>f</mi>
+        <mo stretchy="false">(</mo>
+        <mi>z</mi>
+        <mo stretchy="false">)</mo>
+        <mo>=</mo>
+        <munderover>
+          <mo>&#x2211;<!-- ∑ --></mo>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+            <mo>=</mo>
+            <mn>0</mn>
+          </mrow>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>&#x221E;<!-- ∞ --></mi>
+          </mrow>
+        </munderover>
+        <mfrac>
+          <mrow>
+            <msup>
+              <mi>f</mi>
+              <mo>&#x2032;<!-- ′ --></mo>
+            </msup>
+            <mo stretchy="false">(</mo>
+            <mi>a</mi>
+            <mo stretchy="false">)</mo>
+          </mrow>
+          <mrow>
+            <mi>n</mi>
+            <mo>!</mo>
+          </mrow>
+        </mfrac>
+        <mo stretchy="false">(</mo>
+        <mi>z</mi>
+        <mo>&#x2212;<!-- − --></mo>
         <mi>a</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>=</mo>
-      <msup>
-        <mi>b</mi>
-        <mn>2</mn>
-      </msup>
-      <mo>+</mo>
-      <msup>
-        <mi>c</mi>
-        <mn>2</mn>
-      </msup>
+        <mo stretchy="false">)</mo>
+        <msup>
+          <mrow class="MJX-TeXAtom-ORD">
+            <mi>n</mi>
+          </mrow>
+          <mi>n</mi>
+        </msup>
+      </mrow>
     </math>
-    <p>Where a is the length of the hypotenuse, and b and c are the lengths of the other two sides.</p>
-    <!-- ======= Contact Section ======= -->
+    <!-- ======= SVG Section ======= -->
+    <section id="svg" class="svg">
+      <div class="section-title">
+        <h2>SVG</h2>
+        <p>A slice of pizza:</p>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
+        <path fill="#ffd34d" d="M 0 100 L 50 0 L 100 100 L 0 100 Z" />
+      
+        <path fill="#ff8000" d="M 25 0 L 75 0 L 100 25 Z" />
+      
+        <circle cx="50" cy="40" r="10" fill="#f00" />
+        <circle cx="70" cy="30" r="5" fill="#f00" />
+        
+        </svg>
+      
+      <!-- =========Changing images============-->
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Image Change Example</title>
+          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        </head>
+        <body>
+          <div class="container">
+            <button id="imageButton" class="btn btn-primary">Change Image</button>
+            <button id="forwardButton" class="btn btn-primary">Forward Image</button>
+            <button id="backwardButton" class="btn btn-primary">Backward Image</button>
+            <img id="displayImage" src="" class="img-fluid mt-3" alt="Displayed Image">
+          </div>
+        
+          <script src="java.js"></script>
+        </body>
+      
     
+
+<script>
+  function submitForm() {
+    // Get form values
+    var name = document.getElementById("name").value;
+    var surname = document.getElementById("surname").value;
+    var studentCode = document.getElementById("studentCode").value;
+    var mark1 = parseFloat(document.getElementById("mark1").value);
+    var mark2 = parseFloat(document.getElementById("mark2").value);
+    var mark3 = parseFloat(document.getElementById("mark3").value);
+    var mark4 = parseFloat(document.getElementById("mark4").value);
+  
+    // Validate marks
+    if (isNaN(mark1) || isNaN(mark2) || isNaN(mark3) || isNaN(mark4) ||
+        mark1 < 1 || mark1 > 10 || mark2 < 1 || mark2 > 10 ||
+        mark3 < 1 || mark3 > 10 || mark4 < 1 || mark4 > 10) {
+      alert("Marks must be positive integers between 1 and 10.");
+      return;
+    }
+  
+    // Calculate average mark
+    var averageMark = ((mark1 + mark2 + mark3 + mark4) / 4).toFixed(1);
+  
+    // Display collected information
+    var output = document.getElementById("output");
+    output.innerHTML = "Name: " + name + "<br>";
+    output.innerHTML += "Surname: " + surname + "<br>";
+    output.innerHTML += "Student Code: " + studentCode + "<br>";
+    output.innerHTML += "Marks: <span style='color: " + getMarkColor(averageMark) + ";'>" + averageMark + "</span><br>";
+  
+    // Log collected information to the console
+    console.log("Name:", name);
+    console.log("Surname:", surname);
+    console.log("Student Code:", studentCode);
+    console.log("Marks:", mark1, mark2, mark3, mark4);
+    console.log("Average Mark:", averageMark);
+  }
+  
+  function getMarkColor(mark) {
+    if (mark <= 4) {
+      return "red";
+    } else if (mark <= 8) {
+      return "orange";
+    } else {
+      return "green";
+    }
+  }
+  </script>
+  </head>
+  <body>
+  
+  <h2>Student Information Form</h2>
+  
+  <form id="studentForm">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="surname">Surname:</label><br>
+    <input type="text" id="surname" name="surname"><br>
+    <label for="studentCode">Student Code:</label><br>
+    <input type="text" id="studentCode" name="studentCode"><br>
+    <label for="mark1">Mark 1:</label><br>
+    <input type="number" id="mark1" name="mark1" min="1" max="10"><br>
+    <label for="mark2">Mark 2:</label><br>
+    <input type="number" id="mark2" name="mark2" min="1" max="10"><br>
+    <label for="mark3">Mark 3:</label><br>
+    <input type="number" id="mark3" name="mark3" min="1" max="10"><br>
+    <label for="mark4">Mark 4:</label><br>
+    <input type="number" id="mark4" name="mark4" min="1" max="10"><br>
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+  
+  <div id="output"></div>
+
+  
+      
 
   </main><!-- End #main -->
 
@@ -363,6 +501,7 @@
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="java.js"></script> 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
