@@ -2,10 +2,10 @@
 
 // Array of image URLs
 const images = [
-    "assets/img/portfolio/portfolio-1.jpg",
-    "assets/img/portfolio/portfolio-2.jpg",
-    "assets/img/portfolio/portfolio-3.jpg",
-    "assets/img/portfolio/portfolio-4.jpg",
+    "portfolio-1.jpg",
+    "portfolio-2.jpg",
+    "portfolio-3.jpg",
+    "portfolio-4.jpg",
     // Add more image URLs as needed
   ];
 
