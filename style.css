@@ -10,20 +10,20 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
-  color: #272829;
+  font-family: "Arial", sans-serif; /**changed font style **/
+  color: #0a0a0a;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 a {
-  color: #149ddd;
+  color: #729bae;
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: #135675;
   text-decoration: none;
 }
 
@@ -320,7 +320,8 @@ section {
 }
 
 .section-title {
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #149ddd;
 }
 
 .section-title h2 {
@@ -482,9 +483,9 @@ section {
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 10px; /** changed size**/
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #2c75dc; /**changed border color**/
   position: relative;
 }
 
